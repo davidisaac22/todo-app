@@ -1,13 +1,160 @@
+/* src/App.css */
 body {
+  background-color: #f0f8ff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #74ebd5, #acb6e5);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  width: 90%;
+  max-width: 800px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+button.create {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+  color: #fff;
+}
+
+button.create:hover {
+  background: linear-gradient(45deg, #ff3b3b, #ff6e23);
+}
+
+select {
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.task {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.task.completed {
+  border-left: 5px solid #28a745;
+  opacity: 0.8;
+}
+
+.task h3 {
+  margin: 0 0 10px;
+  color: #007bff;
+}
+
+.task p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.task button {
+  margin-top: 10px;
+  width: auto;
+  padding: 10px 20px;
+}
+
+.task button.complete {
+  background-color: #28a745;
+}
+
+.task button.complete:hover {
+  background-color: #218838;
+}
+
+.task button.edit {
+  background-color: #ffc107;
+}
+
+.task button.edit:hover {
+  background-color: #e0a800;
+}
+
+.task button.delete {
+  background-color: #dc3545;
+}
+
+.task button.delete:hover {
+  background-color: #c82333;
+}
+
+.completed-mark {
+  color: #28a745;
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+/* Transition Styles */
+.task-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.task-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+.task-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.task-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms, transform 500ms;
+}
+.item-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.select-btn {
+  margin: 20px 0;
 }

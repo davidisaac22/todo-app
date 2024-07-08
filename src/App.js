@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>ToDo App</h1>
+      <h1>ToDo List by Dave</h1>
       <TaskForm addTask={addTask} />
       <select onChange={(e) => setFilter(e.target.value)} value={filter} className='select-btn'>
         <option value="all">All</option>
